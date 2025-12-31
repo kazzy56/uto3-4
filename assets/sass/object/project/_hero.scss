@@ -1,0 +1,57 @@
+@use "../../global" as *;
+
+.p-hero {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  margin-bottom: 40px;
+  padding: 70px 0 160px;
+  background-color: $color-bg;
+
+  @include mq(md) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 50px 0 90px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    @include fz(48);
+
+    @include mq(md) {
+      margin-bottom: 10px;
+      @include fz(32);
+    }
+  }
+
+  // 最後の要素のmbがtitleのmbと相殺されていないので嫌な感じ
+  &__title-bg {
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: $color-white;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.6;
+
+    @include mq(md) {
+      margin-bottom: 30px;
+      @include fz(14);
+    }
+  }
+
+  &__img-wapper {
+    max-width: 560px;
+  }
+}

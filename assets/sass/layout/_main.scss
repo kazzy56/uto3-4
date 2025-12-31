@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.l-main {
+  @include mq(md) {
+    padding-top: 60px;
+  }
+}
