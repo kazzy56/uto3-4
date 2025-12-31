@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.l-header {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  background-color: $color-white;
+
+  // 元サイトよりロゴの位置が少し高い、原因不明inner使用しなくても同じ
+  // 判明！元サイトのlogoにline-heightがないから
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
+  @include mq(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
