@@ -1,0 +1,25 @@
+@use "../../global" as *;
+
+.p-contact {
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  padding: 100px 0 60px;
+  background-color: $color-bg;
+
+  @include mq(md) {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%,
+    0 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%,
+    0 100%);
+    padding: 60px 0 40px;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+}
