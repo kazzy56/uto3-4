@@ -1,0 +1,16 @@
+@use "../../global" as *;
+
+.p-price {
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  margin: -80px 0 80px;
+  padding: 120px 0;
+  background-color: $color-bg;
+
+  @include mq(md) {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    margin: -45px 0 40px;
+    padding: 80px 0;
+  }
+}

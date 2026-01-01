@@ -28,3 +28,21 @@
     }
   }
 }
+
+.c-heading-secondary {
+  margin-bottom: 20px; // 標準余白
+
+  &__en {
+    display: block;
+    font-weight: 700;
+    @include fz(22);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__ja {
+    display: block;
+    font-weight: 400;
+    @include fz(12);
+  }
+}
