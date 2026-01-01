@@ -1,0 +1,21 @@
+@use "../../global" as *;
+
+.c-button {
+  display: inline-block;
+  position: relative;
+  padding: 10px 30px;
+  background-color: $color-text;
+  color: $color-white;
+  @include fz(14);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    rotate: 45deg;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid $color-white;
+    border-right: 2px solid $color-white;
+  }
+}
