@@ -368,6 +368,14 @@ a:hover {
   border-right: 2px solid #fff;
 }
 
+.c-button-contact {
+  display: inline-block;
+  padding: 20px 60px;
+  border: 1px solid #707070;
+  background-color: #fff;
+  font-size: 0.875rem;
+}
+
 @media (width <= 767px) {
   .c-hamburger {
     position: fixed;
@@ -511,6 +519,27 @@ a:hover {
 }
 .c-logo__link {
   display: block;
+}
+
+.p-contact {
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  padding: 100px 0 60px;
+  background-color: #ffed58;
+}
+@media (width <= 767px) {
+  .p-contact {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    padding: 60px 0 40px;
+  }
+}
+.p-contact__inner {
+  text-align: center;
+}
+.p-contact__text {
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .p-hero {
@@ -688,6 +717,11 @@ a:hover {
   .p-voice {
     margin-bottom: 40px;
   }
+}
+
+.u-background-marker {
+  background: linear-gradient(transparent 50%, #fff390 50%);
+  font-weight: bold;
 }
 
 .u-block-pc {

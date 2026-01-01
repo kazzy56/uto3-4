@@ -19,3 +19,11 @@
     border-right: 2px solid $color-white;
   }
 }
+
+.c-button-contact {
+  display: inline-block;
+  padding: 20px 60px;
+  border: 1px solid #707070;
+  background-color: $color-white;
+  @include fz(14);
+}
