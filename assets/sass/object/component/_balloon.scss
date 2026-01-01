@@ -1,0 +1,81 @@
+@use "../../global" as *;
+
+.c-balloon {
+  display: grid;
+  row-gap: 40px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+
+    @include mq(md) {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: 182px;
+    // margin-right: 40px;
+
+    @include mq(md) {
+      flex-shrink: 0;
+      width: 100px;
+    }
+  }
+
+  &__img {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 660px;
+    padding: 20px;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    line-height: 2;
+
+    @include mq(md) {
+      padding: 10px;
+      @include fz(14);
+    }
+
+    // もう少しシンプルに記述したいが、bg:whiteがあるのでむずいか？
+    &::after {
+      content: '';
+      -webkit-transform: rotate(135deg);
+              transform: rotate(135deg);
+      position: absolute;
+      top: 45%;
+      left: -10px;
+      width: 18px;
+      height: 18px;
+      background-color: $color-white;
+      border-right: 1px solid #707070;
+      border-bottom: 1px solid #707070;
+
+      .c-balloon__item.c-balloon__item--reverse & {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        right: -10px;
+        // leftを初期値に戻している
+        left: auto;
+      }
+    }
+  }
+
+  &__age {
+    text-align: right;
+  }
+}

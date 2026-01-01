@@ -1,0 +1,9 @@
+@use "../../global" as *;
+
+.p-voice {
+  margin-bottom: 80px;
+
+  @include mq(md) {
+    margin-bottom: 40px;
+  }
+}
