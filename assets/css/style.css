@@ -696,6 +696,95 @@ a:hover {
   line-height: 1.8;
 }
 
+.p-flow {
+  margin-bottom: 100px;
+}
+@media (width <= 767px) {
+  .p-flow {
+    margin-bottom: 40px;
+  }
+}
+.p-flow__list {
+  display: grid;
+  row-gap: 50px;
+}
+@media (width <= 767px) {
+  .p-flow__list {
+    row-gap: 30px;
+  }
+}
+.p-flow__item {
+  display: flex;
+  -webkit-column-gap: 7%;
+  -moz-column-gap: 7%;
+  column-gap: 7%;
+}
+@media (width <= 767px) {
+  .p-flow__item {
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+}
+.p-flow__step {
+  flex-shrink: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  width: 160px;
+  height: 140px;
+  padding-top: 20px;
+  background-color: #ffed58;
+  font-weight: 700;
+  text-align: center;
+}
+@media (width <= 767px) {
+  .p-flow__step {
+    width: 80px;
+    height: 80px;
+    padding-top: 10px;
+  }
+}
+.p-flow__label {
+  display: block;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+@media (width <= 767px) {
+  .p-flow__label {
+    font-size: 0.875rem;
+  }
+}
+.p-flow__number {
+  display: block;
+  font-size: 3.5rem;
+}
+@media (width <= 767px) {
+  .p-flow__number {
+    font-size: 2rem;
+  }
+}
+.p-flow__title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1.375rem;
+}
+@media (width <= 767px) {
+  .p-flow__title {
+    font-size: 1.125rem;
+  }
+}
+.p-flow__description {
+  line-height: 1.8;
+}
+@media (width <= 767px) {
+  .p-flow__description {
+    font-size: 0.875rem;
+  }
+}
+.p-flow__link {
+  text-decoration: underline;
+}
+
 .p-hero {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
