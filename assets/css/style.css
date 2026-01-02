@@ -637,6 +637,65 @@ a:hover {
   line-height: 1.6;
 }
 
+.p-detail {
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin-bottom: 80px;
+  padding: 100px 0;
+  background-color: #ffed58;
+}
+@media (width <= 767px) {
+  .p-detail {
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    margin-bottom: 40px;
+    padding: 80px 0;
+  }
+}
+.p-detail__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (width <= 767px) {
+  .p-detail__body {
+    flex-direction: column;
+  }
+}
+.p-detail__img-wrapper {
+  width: 55%;
+}
+@media (width <= 767px) {
+  .p-detail__img-wrapper {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.p-detail__img {
+  width: 100%;
+}
+.p-detail__content {
+  width: 40%;
+}
+@media (width <= 767px) {
+  .p-detail__content {
+    width: 100%;
+  }
+}
+.p-detail__title {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 1.375rem;
+}
+@media (width <= 767px) {
+  .p-detail__title {
+    text-align: center;
+  }
+}
+.p-detail__text {
+  line-height: 1.8;
+}
+
 .p-hero {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
