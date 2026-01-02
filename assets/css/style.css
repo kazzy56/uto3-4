@@ -270,6 +270,68 @@ a:hover {
   max-width: 1120px;
 }
 
+.l-footer {
+  padding: 40px 0 20px;
+  border-top: 1px solid #707070;
+}
+.l-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media (width <= 767px) {
+  .l-footer__inner {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+.l-footer__logo {
+  max-width: 130px;
+}
+@media (width <= 767px) {
+  .l-footer__logo {
+    margin-bottom: 20px;
+  }
+}
+.l-footer__nav-list {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+@media (width <= 767px) {
+  .l-footer__nav-list {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+}
+.l-footer__nav-item {
+  position: relative;
+  font-size: 0.875rem;
+}
+.l-footer__nav-item::after {
+  content: "/";
+  position: absolute;
+  top: 3px;
+  right: -21px;
+}
+@media (width <= 767px) {
+  .l-footer__nav-item::after {
+    right: -16px;
+  }
+}
+.l-footer__nav-item:last-child::after {
+  content: none;
+}
+.l-footer__copyright {
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media (width <= 767px) {
   .l-main {
     padding-top: 60px;

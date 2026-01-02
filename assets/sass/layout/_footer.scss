@@ -1,0 +1,75 @@
+@use "../global" as *;
+
+.l-footer {
+  padding: 40px 0 20px;
+  border-top: 1px solid #707070;
+
+  // laoutのindexのinnerをfooterの上にしないと効かない
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include mq(md) {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__logo {
+    max-width: 130px;
+
+    @include mq(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+
+    @include mq(md) {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px;
+    }
+  }
+
+  &__nav-item {
+    position: relative;
+    @include fz(14);
+    &::after {
+      content: '/';
+      position: absolute;
+      top: 3px;
+      right: -21px;
+
+      @include mq(md) {
+        right: -16px;
+      }
+
+      // content: '/'の方がいいかも
+      // rotate: 30deg;
+      // position: absolute;
+      // top: 3px;
+      // right: -20px;
+      // width: 1px;
+      // height: 16px;
+      // background-color: #000;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &__copyright {
+    @include fz(12);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
