@@ -691,6 +691,26 @@ a:hover {
   max-width: 560px;
 }
 
+.p-introduce {
+  padding: 50px 0;
+  text-align: center;
+}
+.p-introduce__title {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.8;
+}
+@media (width <= 767px) {
+  .p-introduce__title {
+    font-size: 1.25rem;
+  }
+}
+.p-introduce__text {
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
 @media (width <= 767px) {
   .p-nav {
     position: fixed;
