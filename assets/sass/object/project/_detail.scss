@@ -1,0 +1,65 @@
+@use "../../global" as *;
+
+.p-detail {
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin-bottom: 80px;
+  padding: 100px 0;
+  background-color: $color-bg;
+
+  @include mq(md) {
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+            clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    margin-bottom: 40px;
+    padding: 80px 0;
+  }
+
+
+  // img-wrapperの幅を指定したら表示する
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__img-wrapper {
+    width: 55%;
+    // 幅を指定したらmrはいらない
+    // margin-right: 5%;
+
+    @include mq(md) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    width: 40%;
+
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    @include fz(22);
+
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+}

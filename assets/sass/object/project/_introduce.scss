@@ -1,0 +1,22 @@
+@use "../../global" as *;
+
+.p-introduce {
+  padding: 50px 0;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    @include fz(22);
+    line-height: 1.8;
+
+    @include mq(md) {
+      @include fz(20);
+    }
+  }
+
+  &__text {
+    @include fz(14);
+    line-height: 1.8;
+  }
+}
