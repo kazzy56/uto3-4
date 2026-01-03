@@ -27,3 +27,13 @@
   background-color: $color-white;
   @include fz(14);
 }
+
+.c-button-form {
+  // contact-formに記述
+  // display: block;
+  // margin: 0 auto;
+  padding: 15px 50px;
+  background-color: #000;
+  color: $color-white;
+  @include fz(14);
+}
