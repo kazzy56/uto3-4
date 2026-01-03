@@ -438,6 +438,13 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.c-button-form {
+  padding: 15px 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
 @media (width <= 767px) {
   .c-hamburger {
     position: fixed;
@@ -723,6 +730,57 @@ a:hover {
 .p-contact__text {
   margin-bottom: 40px;
   line-height: 1.6;
+}
+
+.p-contact-form {
+  margin-bottom: 80px;
+}
+@media (width <= 767px) {
+  .p-contact-form {
+    margin-bottom: 40px;
+  }
+}
+.p-contact-form__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.p-contact-form__required {
+  margin-left: 5px;
+  color: #e52d27;
+}
+.p-contact-form__data {
+  margin-bottom: 40px;
+}
+@media (width <= 767px) {
+  .p-contact-form__data {
+    margin-bottom: 25px;
+  }
+}
+.p-contact-form__radio-list {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+@media (width <= 767px) {
+  .p-contact-form__radio-list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+  }
+}
+.p-contact-form__input, .p-contact-form__textarea {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+}
+.p-contact-form__textarea {
+  height: 200px;
+}
+.p-contact-form__button {
+  display: block;
+  margin: 0 auto;
 }
 
 .p-detail {
